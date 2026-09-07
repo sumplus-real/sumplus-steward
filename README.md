@@ -55,29 +55,30 @@ curl -s https://router.sumplus.xyz/v1/models | head
 
 ```mermaid
 flowchart TB
-  OWNER([Owner])
-  subgraph SET["Set once, by the owner"]
-    W["workloads.json<br/>volume · context needed<br/>capability floor · pinned"]
-    M["mandate.py<br/>who owns which change"]
-  end
-  subgraph RUN["Steward"]
-    C["catalogue.py<br/>price every workload<br/>against every viable model"]
-    R["review.py<br/>compare, then ask the mandate"]
-    L["ledger.py<br/>hash-chained receipts"]
-    AG["agent.py<br/>Strands Agent · six tools"]
-  end
   API[["router.sumplus.xyz/v1/models<br/>live prices, no key needed"]]
+  W["workloads.json<br/>volume · context needed<br/>capability floor · pinned"]
+  M["mandate.py<br/>who owns which change"]
+  C["catalogue.py<br/>price every workload<br/>against every viable model"]
+  R["review.py<br/>compare, then ask the mandate"]
+  AP["applied<br/>done, and logged"]
+  ES["escalated<br/>yours to weigh"]
+  RF["refused<br/>with a reason"]
+  L["ledger.py<br/>hash-chained receipts"]
+  OWNER([Owner])
+  AG["agent.py<br/>Strands Agent · six tools"]
 
   API --> C
   W --> C
   C --> R
   M --> R
-  R -- "within mandate: done, and logged" --> L
-  R -- "outside mandate: refused, with a reason" --> L
-  R -- "yours to weigh: escalated" --> L
+  R --> AP
+  R --> ES
+  R --> RF
+  AP --> L
+  ES --> L
+  RF --> L
   L --> OWNER
-  OWNER -- "a question, in words" --> AG
-  AG --> R
+  OWNER --> AG
   AG --> L
 ```
 
