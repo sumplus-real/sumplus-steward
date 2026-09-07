@@ -46,6 +46,41 @@ and it needs no key:
 curl -s https://router.sumplus.xyz/v1/models | head
 ```
 
+## Architecture
+
+```mermaid
+flowchart TB
+  OWNER([Owner])
+  subgraph SET["Set once, by the owner"]
+    W["workloads.json<br/>volume · context needed<br/>capability floor · pinned"]
+    M["mandate.py<br/>who owns which change"]
+  end
+  subgraph RUN["Steward"]
+    C["catalogue.py<br/>price every workload<br/>against every viable model"]
+    R["review.py<br/>compare, then ask the mandate"]
+    L["ledger.py<br/>hash-chained receipts"]
+    AG["agent.py<br/>Strands Agent · six tools"]
+  end
+  API[["router.sumplus.xyz/v1/models<br/>live prices, no key needed"]]
+
+  API --> C
+  W --> C
+  C --> R
+  M --> R
+  R -- "within mandate: done, and logged" --> L
+  R -- "outside mandate: refused, with a reason" --> L
+  R -- "yours to weigh: escalated" --> L
+  L --> OWNER
+  OWNER -- "a question, in words" --> AG
+  AG --> R
+  AG --> L
+```
+
+The Strands agent sits on top, not in the middle. It reads the review and the
+receipts and answers questions about them. It never gets a vote on whether a
+change was inside the mandate, because that answer has to be the same whichever
+model is loaded, and whether or not one is loaded at all.
+
 ## The mandate is the product
 
 An agent that asks about everything is a worse inbox. An agent that asks about
