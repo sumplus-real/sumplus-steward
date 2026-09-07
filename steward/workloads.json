@@ -1,0 +1,52 @@
+[
+  {
+    "name": "support-triage",
+    "model": "gpt-5.5",
+    "monthly_input_tokens": 420000000,
+    "monthly_output_tokens": 38000000,
+    "needs_context": 32000,
+    "quality_sensitive": false,
+    "note": "Classifies inbound tickets and drafts a first reply. High volume, short answers.",
+    "min_tier": "light"
+  },
+  {
+    "name": "contract-review",
+    "model": "gpt-5.5",
+    "monthly_input_tokens": 96000000,
+    "monthly_output_tokens": 12000000,
+    "needs_context": 200000,
+    "quality_sensitive": true,
+    "note": "Reads long agreements and flags clauses. A wrong answer here is expensive.",
+    "min_tier": "flagship"
+  },
+  {
+    "name": "nightly-digest",
+    "model": "kimi-k3",
+    "monthly_input_tokens": 210000000,
+    "monthly_output_tokens": 6000000,
+    "needs_context": 400000,
+    "quality_sensitive": false,
+    "note": "Summarises the day's activity into one page at 03:00.",
+    "min_tier": "light"
+  },
+  {
+    "name": "code-review-bot",
+    "model": "glm-5.2",
+    "monthly_input_tokens": 150000000,
+    "monthly_output_tokens": 22000000,
+    "needs_context": 128000,
+    "quality_sensitive": false,
+    "note": "Comments on pull requests before a human looks.",
+    "min_tier": "mid"
+  },
+  {
+    "name": "board-pack",
+    "model": "gpt-5.5",
+    "monthly_input_tokens": 4000000,
+    "monthly_output_tokens": 900000,
+    "needs_context": 128000,
+    "quality_sensitive": true,
+    "note": "Writes the monthly board summary. Pinned by the finance lead.",
+    "min_tier": "flagship"
+  }
+]

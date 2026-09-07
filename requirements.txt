@@ -1,0 +1,3 @@
+strands-agents>=1.54
+strands-agents-tools>=0.2
+pytest>=8
