@@ -3,6 +3,8 @@
 **Project:** Sumplus Steward
 **Track:** Everyday Agents (money)
 **Built with:** Strands Agents SDK
+**Live demo:** https://sumplus-steward-production.up.railway.app
+**Repository:** https://github.com/sumplus-real/sumplus-steward
 **Deadline:** 2026-09-14, 17:00 Pacific
 
 ## Elevator

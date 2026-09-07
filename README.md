@@ -5,6 +5,11 @@ brings you exactly the decisions that are yours.
 
 Built with the **Strands Agents SDK**. Track: **Everyday Agents** (money).
 
+**Live: https://sumplus-steward-production.up.railway.app** — the same review,
+rendered for someone who has been sent a link. Loading it runs the review for
+real against today's prices. The page is read-only: it applies nothing and
+changes no mandate.
+
 ## The problem
 
 A team ends up running a handful of AI workloads. Each one was put on a model
