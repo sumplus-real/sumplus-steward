@@ -1,7 +1,7 @@
 # Submission — Agents for Humans
 
 **Project:** Sumplus Steward
-**Track:** Everyday Agents (money)
+**Track:** Professional Agents
 **Built with:** Strands Agents SDK
 **Live demo:** https://sumplus-steward-production.up.railway.app
 **Repository:** https://github.com/sumplus-real/sumplus-steward
@@ -13,7 +13,8 @@ A team runs a handful of AI workloads. Each was put on a model once and nobody
 re-checks, because re-checking means pricing five workloads against ninety
 models. Steward does that review in the background, applies what is plainly
 inside its mandate, and brings a person only the calls that are genuinely
-theirs.
+theirs. It is for the engineering leads and small-business owners who run AI
+workloads in production and pay that bill every month.
 
 ## The one-minute demo
 

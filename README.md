@@ -3,7 +3,7 @@
 An agent that looks after what your AI workloads cost, in the background, and
 brings you exactly the decisions that are yours.
 
-Built with the **Strands Agents SDK**. Track: **Everyday Agents** (money).
+Built with the **Strands Agents SDK**. Track: **Professional Agents**.
 
 **Live: https://sumplus-steward-production.up.railway.app** — the same review,
 rendered for someone who has been sent a link. Loading it runs the review for
@@ -16,6 +16,9 @@ A team ends up running a handful of AI workloads. Each one was put on a model
 once, by someone who has since moved on. Prices change weekly and nobody
 re-checks, because re-checking means pricing five workloads against ninety
 models and nobody has an afternoon for that.
+
+Steward is for the engineering leads and small-business owners who run AI
+workloads in production and pay that bill every month.
 
 Two bad endings. Either nobody looks, and the bill grows quietly. Or a tool
 looks and forwards everything it finds, and now you have a second inbox.
